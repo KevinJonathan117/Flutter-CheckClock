@@ -26,7 +26,10 @@ class DrawerComponent extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text(
+              'Home',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -37,7 +40,10 @@ class DrawerComponent extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.settings),
-            title: Text('Settings'),
+            title: Text(
+              'Settings',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -48,7 +54,10 @@ class DrawerComponent extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.phone),
-            title: Text('Contact Us'),
+            title: Text(
+              'Contact Us',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -59,7 +68,10 @@ class DrawerComponent extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.remove),
-            title: Text('Sign Out'),
+            title: Text(
+              'Sign Out',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             onTap: () {
               Navigator.pushReplacement(
                   context,
