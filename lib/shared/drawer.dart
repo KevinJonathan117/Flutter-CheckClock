@@ -8,56 +8,68 @@ class DrawerComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        elevation: 0,
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue[800],
+      elevation: 0,
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue[800],
+            ),
+            child: Text(
+              'Check-Clock',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
               ),
-              child: Text(
-                'Check-Clock',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
             ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: () {
-                print('Home');
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              onTap: () {
-                print('Settings');
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Settings()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.phone),
-              title: Text('Contact Us'),
-              onTap: () {
-                print("Contact Us");
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ContactUs()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.remove),
-              title: Text('Sign Out'),
-              onTap: () {
-                print("Sign Out");
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
-              },
-            ),
-          ],
-        ),
-      );
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (context, _, __) => Home(),
+                      transitionDuration: Duration(seconds: 0)));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (context, _, __) => Settings(),
+                      transitionDuration: Duration(seconds: 0)));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.phone),
+            title: Text('Contact Us'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (context, _, __) => ContactUs(),
+                      transitionDuration: Duration(seconds: 0)));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.remove),
+            title: Text('Sign Out'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (context, _, __) => Login(),
+                      transitionDuration: Duration(seconds: 0)));
+            },
+          ),
+        ],
+      ),
+    );
   }
 }
