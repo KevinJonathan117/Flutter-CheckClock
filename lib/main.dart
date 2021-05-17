@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:check_clock/screens/home.dart';
+import 'package:check_clock/screens/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Check-Clock',
-      home: Home(),
+      home: Login(),
     );
   }
 }

@@ -34,8 +34,8 @@ class DrawerComponent extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageRouteBuilder(
-                      pageBuilder: (context, _, __) => Home(),
-                      transitionDuration: Duration(seconds: 0)));
+                    pageBuilder: (context, _, __) => Home(),
+                  ));
             },
           ),
           ListTile(
@@ -48,8 +48,8 @@ class DrawerComponent extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageRouteBuilder(
-                      pageBuilder: (context, _, __) => Settings(),
-                      transitionDuration: Duration(seconds: 0)));
+                    pageBuilder: (context, _, __) => Settings(),
+                  ));
             },
           ),
           ListTile(
@@ -62,8 +62,8 @@ class DrawerComponent extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageRouteBuilder(
-                      pageBuilder: (context, _, __) => ContactUs(),
-                      transitionDuration: Duration(seconds: 0)));
+                    pageBuilder: (context, _, __) => ContactUs(),
+                  ));
             },
           ),
           ListTile(
@@ -75,9 +75,7 @@ class DrawerComponent extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacement(
                   context,
-                  PageRouteBuilder(
-                      pageBuilder: (context, _, __) => Login(),
-                      transitionDuration: Duration(seconds: 0)));
+                  MaterialPageRoute(builder: (context) => Login()));
             },
           ),
         ],
