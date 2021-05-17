@@ -3,7 +3,7 @@ import 'package:check_clock/screens/menu/history.dart';
 import 'package:check_clock/screens/menu/income.dart';
 import 'package:check_clock/screens/menu/progress_track.dart';
 import 'package:check_clock/screens/menu/calendar.dart';
-import 'package:check_clock/screens/menu/scan_absen.dart';
+import 'package:check_clock/screens/menu/attendance_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:check_clock/shared/drawer.dart';
 
@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
           InkResponse(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ScanAbsen()));
+                  MaterialPageRoute(builder: (context) => AttendanceScan()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
