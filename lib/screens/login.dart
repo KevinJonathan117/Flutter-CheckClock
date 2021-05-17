@@ -1,7 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:check_clock/screens/home.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  var errString = "";
+
+  TextEditingController _usernameController;
+  TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _usernameController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _usernameController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +49,7 @@ class Login extends StatelessWidget {
               "Check-Clock",
               style: TextStyle(
                 fontSize: 24,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
               ),
             ),
             SizedBox(
@@ -39,6 +63,7 @@ class Login extends StatelessWidget {
                   border: OutlineInputBorder(),
                   labelText: 'Email or Username',
                 ),
+                controller: _usernameController,
               ),
             ),
             SizedBox(
@@ -52,16 +77,37 @@ class Login extends StatelessWidget {
                   border: OutlineInputBorder(),
                   labelText: 'Password',
                 ),
+                controller: _passwordController,
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 25,
+            ),
+            Text(
+              errString,
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.red,
+              ),
+            ),
+            SizedBox(
+              height: 25,
             ),
             FlatButton(
               color: Colors.blue[800],
               onPressed: () {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                if (_usernameController.text == "kevin" &&
+                    _passwordController.text == "123") {
+                  setState(() {
+                    errString = "";
+                  });
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (context) => Home()));
+                } else {
+                  setState(() {
+                    errString = "Username/Password Salah!";
+                  });
+                }
               },
               child: Padding(
                 padding:
