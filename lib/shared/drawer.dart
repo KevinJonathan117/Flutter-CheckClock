@@ -9,76 +9,82 @@ class DrawerComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 0,
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue[800],
-            ),
-            child: Text(
-              'Check-Clock',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
+      child: Container(
+        color: Colors.blue[800],
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue[800],
+              ),
+              child: Text(
+                'Check-Clock',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
               ),
             ),
-          ),
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text(
-              'Home',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            ListTile(
+              leading: Icon(Icons.home, color: Colors.white),
+              title: Text(
+                'Home',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, _, __) => Home(),
+                    ));
+              },
             ),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (context, _, __) => Home(),
-                  ));
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text(
-              'Settings',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            ListTile(
+              leading: Icon(Icons.settings, color: Colors.white),
+              title: Text(
+                'Settings',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, _, __) => Settings(),
+                    ));
+              },
             ),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (context, _, __) => Settings(),
-                  ));
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.phone),
-            title: Text(
-              'Contact Us',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            ListTile(
+              leading: Icon(Icons.phone, color: Colors.white),
+              title: Text(
+                'Contact Us',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, _, __) => ContactUs(),
+                    ));
+              },
             ),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  PageRouteBuilder(
-                    pageBuilder: (context, _, __) => ContactUs(),
-                  ));
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.remove),
-            title: Text(
-              'Sign Out',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            ListTile(
+              leading: Icon(Icons.remove, color: Colors.white),
+              title: Text(
+                'Sign Out',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (context) => Login()));
+              },
             ),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => Login()));
-            },
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

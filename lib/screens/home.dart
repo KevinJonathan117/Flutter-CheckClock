@@ -1,3 +1,9 @@
+import 'package:check_clock/screens/menu/help.dart';
+import 'package:check_clock/screens/menu/history.dart';
+import 'package:check_clock/screens/menu/income.dart';
+import 'package:check_clock/screens/menu/progress_track.dart';
+import 'package:check_clock/screens/menu/calendar.dart';
+import 'package:check_clock/screens/menu/scan_absen.dart';
 import 'package:flutter/material.dart';
 import 'package:check_clock/shared/drawer.dart';
 
@@ -20,7 +26,8 @@ class Home extends StatelessWidget {
         children: [
           InkResponse(
             onTap: () {
-              print("Scan Absen");
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ScanAbsen()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -44,7 +51,8 @@ class Home extends StatelessWidget {
           ),
           InkResponse(
             onTap: () {
-              print("Progress Track");
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProgressTrack()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -68,7 +76,8 @@ class Home extends StatelessWidget {
           ),
           InkResponse(
             onTap: () {
-              print("Calendar");
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Calendar()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -92,7 +101,8 @@ class Home extends StatelessWidget {
           ),
           InkResponse(
             onTap: () {
-              print("Income");
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Income()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -116,7 +126,8 @@ class Home extends StatelessWidget {
           ),
           InkResponse(
             onTap: () {
-              print("History Absensi");
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => History()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -140,7 +151,8 @@ class Home extends StatelessWidget {
           ),
           InkResponse(
             onTap: () {
-              print("Help");
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Help()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
