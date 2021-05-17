@@ -1,3 +1,4 @@
+import 'package:check_clock/screens/generate_qrcode.dart';
 import 'package:flutter/material.dart';
 import 'package:check_clock/shared/drawer.dart';
 
@@ -26,7 +27,10 @@ class _SettingsState extends State<Settings> {
               Card(
                 elevation: 5,
                 child: ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => GenerateQRCode()));
+                  },
                   leading: Icon(
                     Icons.person_rounded
                   ),

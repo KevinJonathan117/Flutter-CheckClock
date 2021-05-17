@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:check_clock/shared/drawer.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class ScanAbsen extends StatelessWidget {
   @override
@@ -10,7 +10,20 @@ class ScanAbsen extends StatelessWidget {
         backgroundColor: Colors.blue[800],
         elevation: 0,
       ),
-      //drawer: DrawerComponent(),
+      body: Container(
+        child: Column(
+          children: [
+            SizedBox(height: 100),
+            Center(
+              child: QrImage(
+                data: "KevinJonathan_" + DateTime.now().toString(),
+                version: QrVersions.auto,
+                size: 400.0,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
