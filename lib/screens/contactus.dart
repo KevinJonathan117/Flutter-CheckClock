@@ -35,34 +35,22 @@ class ContactUs extends StatelessWidget {
               SizedBox(height: 50),
               Text(
                 "Phone: +6281234567890",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 25),
               Text(
                 "LINE OA: @checkclock.id",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 25),
               Text(
                 "IG: @checkclock.id",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 25),
               Text(
                 "Email: info@checkclock.co.id",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ],
           ),

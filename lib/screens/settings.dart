@@ -29,11 +29,11 @@ class _SettingsState extends State<Settings> {
                 child: ListTile(
                   onTap: () {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => GenerateQRCode()));
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GenerateQRCode()));
                   },
-                  leading: Icon(
-                    Icons.person_rounded
-                  ),
+                  leading: Icon(Icons.person_rounded),
                   title: Text(
                     "Kevin Jonathan",
                     style: TextStyle(

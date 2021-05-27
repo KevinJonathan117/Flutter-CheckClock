@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:check_clock/shared/drawer.dart';
 
 class Income extends StatelessWidget {
   @override
@@ -10,7 +9,6 @@ class Income extends StatelessWidget {
         backgroundColor: Colors.blue[800],
         elevation: 0,
       ),
-      //drawer: DrawerComponent(),
     );
   }
 }

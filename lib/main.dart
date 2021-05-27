@@ -1,4 +1,3 @@
-import 'package:check_clock/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:check_clock/screens/login.dart';
 
@@ -16,4 +15,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
