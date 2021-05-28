@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class AttendanceScan extends StatelessWidget {
+class AttendanceScan extends StatefulWidget {
+  @override
+  _AttendanceScanState createState() => _AttendanceScanState();
+}
+
+class _AttendanceScanState extends State<AttendanceScan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
