@@ -25,9 +25,15 @@ class _ProgressTrackState extends State<ProgressTrack> {
       body: Column(
         children: [
           SizedBox(height: 20),
-          Text("2021", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+          Text(
+            "2021",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
           SizedBox(height: 20),
-          Text("Key Performance Graph", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+          Text(
+            "Key Performance Graph",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
           Stack(
             children: <Widget>[
               AspectRatio(
@@ -60,8 +66,9 @@ class _ProgressTrackState extends State<ProgressTrack> {
                     'avg',
                     style: TextStyle(
                         fontSize: 12,
-                        color:
-                            showAvg ? Colors.black.withOpacity(0.5) : Colors.black.withOpacity(0.25)),
+                        color: showAvg
+                            ? Colors.black.withOpacity(0.5)
+                            : Colors.black.withOpacity(0.25)),
                   ),
                 ),
               ),
